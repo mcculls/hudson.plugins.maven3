@@ -31,6 +31,8 @@
     <pluginName>Hudson Maven3 Support</pluginName>
   </properties>
 
+  <url>http://wiki.hudson-ci.org/display/HUDSON/Maven+3+Build+Plugin</url>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -66,6 +68,18 @@
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>rest-plugin</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -200,7 +214,6 @@
       <plugin>
         <groupId>org.jvnet.hudson.tools</groupId>
         <artifactId>maven-hpi-plugin</artifactId>
-        <version>${maven-hpi-plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
           <showDeprecation>true</showDeprecation>

@@ -27,7 +27,6 @@ import org.apache.maven.eventspy.EventSpy;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
 import org.eclipse.hudson.utils.common.TestAccessible;
-import org.model.hudson.maven.eventspy.common.Constants;
 import org.sonatype.guice.bean.binders.SpaceModule;
 import org.sonatype.guice.bean.binders.WireModule;
 import org.sonatype.guice.bean.locators.MutableBeanLocator;
@@ -36,14 +35,15 @@ import org.sonatype.inject.BeanEntry;
 
 import java.lang.annotation.Annotation;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.Map;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
-import static org.model.hudson.maven.eventspy.common.Constants.DELEGATE_PROPERTY;
+import static org.eclipse.hudson.maven.eventspy.common.Constants.DELEGATE_PROPERTY;
 
 /**
- * Delegates to a {@link EventSpy} component configured via {@link Constants#DELEGATE_PROPERTY}.
+ * Delegates to a {@link EventSpy} component configured via {@link org.eclipse.hudson.maven.eventspy.common.Constants#DELEGATE_PROPERTY}.
  * This is the main {@link EventSpy} which Maven will load and is configured via Plexus, delegate
  * is loaded via JSR-330.
  *
@@ -152,7 +152,11 @@ public class DelegatingEventSpy
         // Load the delegate, default to RemotingEventSpy
         String name = getProperty(DELEGATE_PROPERTY, RemotingEventSpy.class.getName());
         log.debug("Loading delegate named: {}", name);
-        return injector.getInstance(Key.get(EventSpy.class, Names.named(name)));
+        Iterator<BeanEntry<Annotation, EventSpy>> itr = locator.locate(Key.get(EventSpy.class, Names.named(name))).iterator();
+        if (itr.hasNext()) {
+            return itr.next().getValue();
+        }
+        throw new RuntimeException("No such delegate: "+name);
     }
 
     @Override

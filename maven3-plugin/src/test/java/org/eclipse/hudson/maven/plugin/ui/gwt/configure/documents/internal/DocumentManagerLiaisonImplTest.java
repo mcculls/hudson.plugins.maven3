@@ -47,6 +47,7 @@ import javax.ws.rs.core.Response.Status;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyBoolean;
+import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.anyCollectionOf;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.inOrder;
@@ -131,12 +132,12 @@ public class DocumentManagerLiaisonImplTest
         doAnswer(new Answer()
         {
             public Object answer(final InvocationOnMock invocation) throws Throwable {
-                MethodCallback<DocumentsDTO> callback = (MethodCallback<DocumentsDTO>) invocation.getArguments()[1];
+                MethodCallback<DocumentsDTO> callback = (MethodCallback<DocumentsDTO>) invocation.getArguments()[2];
                 DocumentsDTO result = new DocumentsDTO().withDocuments(new DocumentDTO());
                 callback.onSuccess(successMethod, result);
                 return null;
             }
-        }).when(documentRestService).getDocuments(anyBoolean(), any(MethodCallback.class));
+        }).when(documentRestService).getDocuments(anyBoolean(), anyLong(), any(MethodCallback.class));
 
         liaison.fetchAll();
 
