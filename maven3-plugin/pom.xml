@@ -57,6 +57,7 @@
     <dependency>
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
+      <version>3.0.0</version>
       <scope>provided</scope>
     </dependency>
 
@@ -68,6 +69,7 @@
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>rest-plugin</artifactId>
+      <version>3.0.0</version>
     </dependency>
 
     <dependency>
@@ -85,12 +87,14 @@
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>hudson-service</artifactId>
+      <version>3.0.0</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>hudson-rest-api</artifactId>
+      <version>3.0.0</version>
       <scope>provided</scope>
     </dependency>
 
@@ -109,18 +113,21 @@
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>hudson-gwt-common</artifactId>
+      <version>3.0.0</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>hudson-gwt-icons-silk</artifactId>
+      <version>3.0.0</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>hudson-gwt-theme-chrome</artifactId>
+      <version>3.0.0</version>
       <scope>provided</scope>
     </dependency>
 
@@ -133,6 +140,7 @@
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>hudson-gwt-test-support</artifactId>
+      <version>3.0.0</version>
       <scope>test</scope>
     </dependency>
 
@@ -145,6 +153,7 @@
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>hudson-test-utils</artifactId>
+      <version>3.0.0</version>
       <scope>test</scope>
     </dependency>
 
