@@ -39,7 +39,7 @@
         <groupId>org.eclipse.hudson.main</groupId>
         <artifactId>hudson-rest</artifactId>
         <type>pom</type>
-        <version>${project.version}</version>
+        <version>3.0.0</version>
         <scope>import</scope>
       </dependency>
 
@@ -47,7 +47,7 @@
         <groupId>org.eclipse.hudson.main</groupId>
         <artifactId>hudson-gwt</artifactId>
         <type>pom</type>
-        <version>${project.version}</version>
+        <version>3.0.0</version>
         <scope>import</scope>
       </dependency>
     </dependencies>
