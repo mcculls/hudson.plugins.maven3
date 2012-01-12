@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.eclipse.hudson.main</groupId>
     <artifactId>hudson-maven3</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.0</version>
   </parent>
 
   <artifactId>maven3-slavebundle</artifactId>
@@ -89,7 +89,7 @@
             </goals>
             <configuration>
               <input>${project.build.directory}/runtime-classes</input>
-              <includes/>
+              <includes />
               <rules>
                 <zap>
                   <pattern>**.eventspy_30.**</pattern>
