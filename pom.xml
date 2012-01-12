@@ -24,7 +24,7 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <version>3.0.0</version>
+  <version>3.0.0-SNAPSHOT</version>
   <artifactId>hudson-maven3</artifactId>
   <name>Hudson :: Maven 3</name>
   <packaging>pom</packaging>
