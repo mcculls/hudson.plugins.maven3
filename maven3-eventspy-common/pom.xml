@@ -47,7 +47,7 @@
     <dependency>
       <groupId>org.eclipse.hudson.main</groupId>
       <artifactId>hudson-remoting</artifactId>
-      <version>3.0.0</version>
+      <version>${hudson.core.version}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
