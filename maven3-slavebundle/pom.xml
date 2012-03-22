@@ -106,7 +106,7 @@
                                     <pattern>**.eventspy_30.**</pattern>
                                 </zap>
                                 <keep>
-                                    <pattern>org.eclipse.hudson.maven.**</pattern>
+                                    <pattern>org.hudsonci.maven.**</pattern>
                                 </keep>
                                 <keep>
                                     <pattern>ch.qos.logback.**</pattern>
