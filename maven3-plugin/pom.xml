@@ -274,7 +274,7 @@
             </plugin>
 
             <plugin>
-                <groupId>org.jvnet.hudson.tools</groupId>
+                <groupId>org.eclipse.hudson.tools</groupId>
                 <artifactId>maven-hpi-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>

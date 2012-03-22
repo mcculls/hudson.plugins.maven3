@@ -31,8 +31,8 @@
         <!--generateIsSetMethod="true">-->
 
         <javaType name="java.util.Date" xmlType="xs:dateTime"
-            parseMethod="org.eclipse.hudson.maven.model.DateTimeAdapter.parseDate"
-            printMethod="org.eclipse.hudson.maven.model.DateTimeAdapter.printDate"
+            parseMethod="org.hudsonci.maven.model.DateTimeAdapter.parseDate"
+            printMethod="org.hudsonci.maven.model.DateTimeAdapter.printDate"
         />
 
         <serializable uid="1"/>
