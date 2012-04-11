@@ -14,6 +14,7 @@
 #
 #************************************************************************** --> 
 
+<?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout" xmlns:f="/lib/form">
     <l:layout title="${it.pageTitle}" permission="${it.viewPermission}" norefresh="true">
         <st:include page="sidepanel.jelly" from="${it.sidePanelOwner}"/>
